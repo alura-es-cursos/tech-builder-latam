@@ -256,6 +256,7 @@ const paths = [
     id: 'beginner',
     title: 'Estoy empezando o vengo de otra área',
     icon: Compass,
+    filter: 'Principiantes',
 
     totalHours: 65,
     weeklyHours: '6-8h',
@@ -265,6 +266,7 @@ const paths = [
     steps: [
       'Nivelación',
       'Desarrollo y Orquestación con IA Generativa',
+      'Oracle Cloud Infrastructure',
       'Challenge',
     ],
 
@@ -276,6 +278,7 @@ const paths = [
     id: 'backend',
     title: 'Quiero crecer en back-end o full-stack',
     icon: Code2,
+    filter: 'Back-end',
 
     totalHours: 65,
     weeklyHours: '7-8h',
@@ -297,6 +300,7 @@ const paths = [
     id: 'data',
     title: 'Me interesa ciencia de datos o IA aplicada',
     icon: Database,
+    filter: 'Datos',
 
     totalHours: 89,
     weeklyHours: '10-12h',
@@ -304,9 +308,9 @@ const paths = [
     duration: '8 semanas',
 
     steps: [
-      'Nivelación',
       'Desarrollo y Orquestación con IA Generativa',
       'Inteligencia de Datos y RAG Avanzado',
+      'Oracle Cloud Infrastructure',
       'Challenge',
     ],
 
@@ -318,6 +322,7 @@ const paths = [
     id: 'frontend',
     title: 'Tengo perfil front-end y quiero sumar IA',
     icon: Sparkles,
+    filter: 'Front-end',
 
     totalHours: 47,
     weeklyHours: '5-6h',
@@ -327,6 +332,7 @@ const paths = [
     steps: [
       'Desarrollo y Orquestación con IA Generativa',
       'Ingeniería de Agentes y Automatización con IA',
+      'Oracle Cloud Infrastructure',
       'Challenge',
     ],
 
@@ -354,7 +360,8 @@ export default function FormacionesG10Site() {
 
   const visibleFormations = useMemo(() => {
     if (activeFilter === 'Todas') return formations;
-    if (activeFilter === 'Datos') return formations.filter((f) => f.audience.some((a) => a.includes('datos') || a.includes('Analítica') || a.includes('IA aplicada')) || f.id === 'rag');
+    if (activeFilter === 'Datos') return formations.filter((f) => f.audience.some((a) => a.includes('datos') || a.includes('Analítica') || a.includes('IA aplicada')) 
+      || f.id === 'rag' || f.id === 'generativa' || f.id === 'oci' || f.id === 'oci'); 
     return formations.filter((f) => f.audience.some((a) => a.toLowerCase().includes(activeFilter.toLowerCase())) || f.title.toLowerCase().includes(activeFilter.toLowerCase()));
   }, [activeFilter]);
 
@@ -458,6 +465,16 @@ export default function FormacionesG10Site() {
                                 </div>
                               ))}
                             </div>
+
+                            <a 
+                              onClick={() => {
+                                setActiveFilter(path.filter);
+                                document.getElementById('formaciones')?.scrollIntoView({ behavior: 'smooth' });
+                              }}
+                            >
+                              <Button className="mt-4 rounded-full">¡Quiero empezar!</Button>
+                            </a>
+
                             <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
                               <div className="rounded-2xl bg-slate-100 p-3">
                                 <p className="text-xs text-slate-500">Carga total</p>
@@ -518,7 +535,7 @@ export default function FormacionesG10Site() {
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">Catálogo de formaciones</p>
-              <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Explora los conjuntos de cursos disponibles</h2>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Explora las formaciones disponibles</h2>
               <p className="mt-4 text-lg leading-8 text-slate-600">Filtra por interés y revisa qué aprenderás, para quién está pensada cada formación y cómo puede ayudarte en tu proyecto.</p>
             </div>
             <div className="flex flex-wrap items-center gap-2">
