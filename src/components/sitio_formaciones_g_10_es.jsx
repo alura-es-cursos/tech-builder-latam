@@ -324,8 +324,8 @@ const paths = [
     icon: Sparkles,
     filter: 'Front-end',
 
-    totalHours: 47,
-    weeklyHours: '5-6h',
+    totalHours: 65,
+    weeklyHours: '7-8h',
     intensity: 'Ligero a moderado',
     duration: '8 semanas',
 
