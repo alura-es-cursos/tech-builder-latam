@@ -514,15 +514,26 @@ export default function FormacionesG10Site() {
                 <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10">
                   <GitBranch className="h-7 w-7" />
                 </div>
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200">Contenido obligatorio</p>
-                <h2 className="mt-3 text-3xl font-bold">Challenge individual</h2>
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200">CHALLENGE obligatorio</p>
+                <h2 className="mt-3 text-3xl font-bold">Challenge Alura Agente</h2>
                 <p className="mt-4 leading-7 text-slate-300">Este será el proyecto que cada estudiante deberá crear individualmente. Las formaciones funcionan como apoyo para llegar con más claridad, práctica y confianza.</p>
               </div>
               <div className="p-8 sm:p-10">
                 <div className="rounded-3xl border-2 border-dashed border-slate-300 bg-slate-50 p-8 text-center">
-                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Espacio reservado</p>
-                  <h3 className="mt-3 text-2xl font-bold">Aquí se insertará la información del challenge</h3>
-                  <p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-600">Agrega más adelante el objetivo del proyecto, criterios de entrega, fechas, tecnologías sugeridas, rúbrica de evaluación y ejemplos de entregables.</p>
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Challenge obligatorio</p>
+                  <div className="mt-3 text-left">
+                    <p className="text-2xl font-semibold text-center">El Alura Agente es un proyecto que incluye:</p>
+                    <ul className="mt-4  space-y-2 pl-5 text-lg leading-8 text-slate-700 text-center">
+                      <li>Desarrollo de un agente inteligente.</li>
+                      <li>Respuesta en lenguaje natural con bases de conocimiento.</li>
+                      <li>Documentación del proyecto en GitHub.</li>
+                      <li>Despliegue en la nube con Oracle Cloud Infrastructure (OCI).</li>
+                    </ul>
+                  </div>
+                  <p className="mx-auto mt-6 max-w-2xl leading-7 text-slate-600 font-semibold uppercase">Plazo final para entregar: 22 de Julio de 2026.</p>
+                  <div className="mt-6">
+                    <a href="https://app.aluracursos.com/course/challenge-alura-agente" target="_blank" className="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">Acceder al challenge</a>
+                  </div>
                 </div>
               </div>
             </CardContent>
