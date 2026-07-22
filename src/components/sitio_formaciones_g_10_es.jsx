@@ -4,7 +4,7 @@ import { BookOpen, BrainCircuit, Cloud, Code2, Database, GitBranch, Rocket, Spar
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import logoOne from '@/assets/logo-one.png';
-import logoAlura from '@/assets/logo-alura.png';
+import logoAlura from '@/assets/logoalura.png';
 
 const formations = [
   {
